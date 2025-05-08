@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Burbujitas de Colores</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffe4f1 10%, #ffffff 80%, #ffe4f1 10%);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background-color: #ffffff;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    nav {
+      background-color: #fdf1f8;
+      padding: 1.2em 2em;
+      display: flex;
+      justify-content: center;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav a {
+      color: #444;
+      text-decoration: none;
+      margin: 0 1.5em;
+      font-size: 1em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      color: #d38cab;
+    }
+
+    section {
+      padding: 3em 2em;
+    }
+
+    h1.titulo {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.8em;
+      color: #e35da4;
+      text-align: center;
+      margin-bottom: 0.5em;
+      text-shadow: 1px 1px 2px #ffd9ec;
+    }
+
+    h2 {
+      font-weight: 300;
+      margin-bottom: 1em;
+      color: #d1649a;
+    }
+
+    p {
+      margin-bottom: 1.5em;
+      font-size: 1.1em;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .galeria img {
+      max-width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    }
+
+    form {
+      max-width: 500px;
+    }
+
+    label {
+      display: block;
+      margin-top: 1em;
+      font-size: 0.95em;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.75em;
+      border: 1px solid #ccc;
+      margin-top: 0.5em;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    button {
+      margin-top: 1.5em;
+      padding: 0.75em 2em;
+      background-color: #f4b6d5;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    button:hover {
+      background-color: #e58fbd;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85em;
+      color: #aaa;
+      padding: 2em;
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="inicio">
+      <h1 class="titulo">🌈 Burbujitas de Colores 🌸</h1>
+      <p style="text-align: center;">
+        Creaciones dulces, coloridas y hechas a mano con mucho amor. Bienvenidos a nuestro mundo de alegría artesanal.
+      </p>
+    </section>
+
+    <section id="productos">
+      <h2>Productos</h2>
+      <p>Textiles y detalles decorativos hechos a mano, ideales para regalar o decorar tu rincón favorito.</p>
+      <div class="galeria">
+        <img src="img/flores-tela-beis-600x706.jpg" alt="Producto artesanal 1" />
+        <img src="img/flores-tela-beis-600x706.jpg" alt="Producto artesanal 2" />
+        <img src="img/flores-tela-beis-600x706.jpg" alt="Producto artesanal 3" />
+      </div>
+    </section>
+
+    <section id="cursos">
+      <h2>Cursos</h2>
+      <p><strong>Taller de Flores de Tela</strong></p>
+      <p>
+        Aprendé a crear flores de tela encantadoras y originales. No necesitás experiencia previa: solo ganas de crear y compartir.
+      </p>
+      <p>
+        <strong>Modalidad:</strong> Presencial <br />
+        <strong>Duración:</strong> 3 horas
+      </p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Querés hacer un pedido o inscribirte a un taller? Escribinos:</p>
+      <form action="https://formspree.io/f/xxxxx" method="POST">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required />
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <footer>
+      © 2025 Burbujitas de Colores | Hecho con amor 💕
+    </footer>
+  </div>
+</body>
+</html>
+
