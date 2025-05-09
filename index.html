@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Burbujitas de Colores</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #ffe4f1 25%, #ffffff 50%, #ffe4f1 25%);
+      color: #333;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+
+    nav {
+      background-color: #fdf1f8;
+      padding: 1.2em 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 1.5em;
+      border-bottom: 1px solid #ddd;
+      overflow-x: auto;
+      white-space: nowrap;
+      scroll-behavior: smooth;
+    }
+
+    nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    nav a {
+      color: #444;
+      text-decoration: none;
+      font-size: 1em;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      color: #d38cab;
+    }
+
+    section {
+      padding: 3em 0;
+    }
+
+    h1.titulo {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.8em;
+      color: #e35da4;
+      text-align: center;
+      margin-bottom: 0.5em;
+      text-shadow: 1px 1px 2px #ffd9ec;
+    }
+
+    h2 {
+      font-weight: 300;
+      margin-bottom: 1em;
+      color: #d1649a;
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 1.5em;
+      font-size: 1.1em;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85em;
+      color: #aaa;
+      padding: 2em 0;
+      border-top: 1px solid #eee;
+    }
+
+    .carousel-container {
+      position: relative;
+      max-width: 100%;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 33.3333%;
+      box-sizing: border-box;
+      padding: 0 10px;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .caption {
+      text-align: center;
+      font-size: 0.95em;
+      margin-top: 0.5em;
+      color: #666;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 40%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-buttons button {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      padding: 0.5em 1em;
+      cursor: pointer;
+      font-size: 1.5em;
+      border-radius: 5px;
+    }
+
+    @media (max-width: 768px) {
+      .carousel-slide {
+        min-width: 50%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .carousel-slide {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Productos</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="inicio">
+      <h1 class="titulo">🌈 Burbujitas de Colores 🌸</h1>
+      <p><strong>Burbujitas de Colores</strong> nace del amor por lo hecho a mano y la alegría que transmiten los colores. Acá tejemos historias con hilos, telas y creatividad.</p>
+      <p>Nos dedicamos a crear <strong>flores de tela, tejidos decorativos y muñecos de crochet</strong> con un estilo tierno, artesanal y lleno de vida.</p>
+      <p>También ofrecemos <strong>talleres recreativos</strong> donde compartimos saberes y técnicas de flores de tela.</p>
+    </section>
+
+    <section id="productos">
+      <h2>Productos</h2>
+      <div class="carousel-container">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide"><img src="img/flor c cajon 2.jpg"><p class="caption">Muñeco crochet</p></div>
+          <div class="carousel-slide"><img src="img/flor c cajon.jpg"><p class="caption">Ramo completo</p></div>
+          <div class="carousel-slide"><img src="img/ositos.jpg"><p class="caption">Flor beige</p></div>
+          <div class="carousel-slide"><img src="img/flor sola.jpg"><p class="caption">Tejido decorativo</p></div>
+          <div class="carousel-slide"><img src="img/Flores c circulo.jpg"><p class="caption">Decoración en tela</p></div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="moveSlide(-1)">❮</button>
+          <button onclick="moveSlide(1)">❯</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="cursos">
+      <h2>Cursos</h2>
+      <p><strong>Taller Recreativo de Flores de Tela</strong></p>
+      <p>Una propuesta pensada para relajarse, crear y compartir. Vas a aprender a hacer flores de tela desde cero, con técnicas simples y resultados encantadores.</p>
+      <div class="carousel-container">
+        <div class="carousel-track" id="carouselTalleres">
+          <div class="carousel-slide"><img src="img/taller 4.jpg"><p class="caption">Armado de flores paso a paso</p></div>
+          <div class="carousel-slide"><img src="img/taller 5.jpg"><p class="caption">Materiales disponibles para todas</p></div>
+          <div class="carousel-slide"><img src="img/taller 7.jpg"><p class="caption">Detalle de flores terminadas</p></div>
+          <div class="carousel-slide"><img src="img/taller 11.jpg"><p class="caption">Momentos compartidos</p></div>
+          <div class="carousel-slide"><img src="img/taller 18.jpg"><p class="caption">Diseños en tela listos para llevar</p></div>
+          <div class="carousel-slide"><img src="img/taller 15.jpg"><p class="caption">Taller recreativo en acción</p></div>
+        </div>
+        <div class="carousel-buttons">
+          <button onclick="moveTaller(-1)">❮</button>
+          <button onclick="moveTaller(1)">❯</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>¿Querés hacer un pedido o anotarte a un taller?</p>
+      <p>Escribinos por WhatsApp o seguinos en Instagram:</p>
+      <div style="text-align: center;">
+        <a href="https://wa.me/5491149476148" target="_blank">
+          <button style="background-color: #25D366; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 8px;">💬 WhatsApp</button>
+        </a>
+        <a href="https://www.instagram.com/burbudecolores" target="_blank">
+          <button style="background-color: #C13584; color: white; padding: 10px 20px; margin: 5px; border: none; border-radius: 8px;">📸 Instagram</button>
+        </a>
+      </div>
+    </section>
+
+    <footer>© 2025 Burbujitas de Colores | Hecho con amor 💕</footer>
+  </div>
+
+  <!-- Íconos flotantes -->
+  <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
+    <a href="https://wa.me/5491149476148" target="_blank" title="WhatsApp" style="display: block; margin-bottom: 10px;">
+      <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" style="width: 45px; height: 45px;">
+    </a>
+    <a href="https://www.instagram.com/burbudecolores" target="_blank" title="Instagram">
+      <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" style="width: 45px; height: 45px;">
+    </a>
+  </div>
+
+  <script>
+    // Carrusel productos
+    const track = document.getElementById('carouselTrack');
+    const slides = document.querySelectorAll('#carouselTrack .carousel-slide');
+    let currentIndex = 0;
+    function moveSlide(direction) {
+      const visible = window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 2 : 3;
+      currentIndex = (currentIndex + direction + slides.length - visible + 1) % (slides.length - visible + 1);
+      track.style.transform = `translateX(-${(100 / visible) * currentIndex}%)`;
+    }
+    setInterval(() => moveSlide(1), 4000);
+
+    // Carrusel talleres
+    const trackTalleres = document.getElementById('carouselTalleres');
+    const slidesTalleres = document.querySelectorAll('#carouselTalleres .carousel-slide');
+    let indexTaller = 0;
+    function moveTaller(direction) {
+      const visible = window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 2 : 3;
+      indexTaller = (indexTaller + direction + slidesTalleres.length - visible + 1) % (slidesTalleres.length - visible + 1);
+      trackTalleres.style.transform = `translateX(-${(100 / visible) * indexTaller}%)`;
+    }
+    setInterval(() => moveTaller(1), 5000);
+  </script>
+</body>
+</html>
